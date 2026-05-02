@@ -50,7 +50,7 @@ export default function Overlay({ heroRef }: Props) {
   const opacity4 = useTransform(scrollYProgress, [0.86, 0.92, 1.0], [0, 1, 1]);
 
   const phaseClass =
-    'absolute inset-0 flex flex-col justify-center items-start text-left pl-8 md:pl-16 lg:pl-24 pr-8 pointer-events-none';
+    'absolute inset-0 flex flex-col justify-end items-start text-left pl-8 md:pl-16 lg:pl-24 pr-8 pb-[15vh] pointer-events-none';
 
   return (
     <div className="absolute inset-0 pointer-events-none z-10">
@@ -63,13 +63,13 @@ export default function Overlay({ heroRef }: Props) {
             visibility: visibility1,
             willChange: 'opacity, visibility',
           }}
-          className="absolute inset-0 flex items-center justify-center"
+          className="absolute inset-0 flex flex-col justify-end items-start text-left pl-8 md:pl-16 lg:pl-24 pr-8 pb-[15vh] pointer-events-none"
         >
           <h1
-            className="watermark-glass text-[15vw] font-black tracking-tighter select-none text-center leading-none cursor-default"
+            className="text-4xl md:text-5xl font-bold tracking-tight select-none cursor-default"
             style={{ pointerEvents: 'auto' }}
           >
-            Samiq <br /> Abbas.
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Samiq Bukhari.</span>
           </h1>
         </motion.div>
 
@@ -79,16 +79,16 @@ export default function Overlay({ heroRef }: Props) {
           className={phaseClass}
         >
           <div className="max-w-[640px]">
-            <p className="text-base md:text-xl text-slate-800 mb-3 font-medium tracking-wide drop-shadow-sm">
+            <p className="text-base md:text-xl text-blue-600 mb-3 font-semibold tracking-wide drop-shadow-sm">
               I study Data Sciences, AI &amp; Web Dev
             </p>
             <h2
               className="text-5xl md:text-7xl lg:text-8xl text-slate-800 drop-shadow-md mb-4"
               style={{ fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1 }}
             >
-              Samiq Abbas.
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Samiq Bukhari.</span>
             </h2>
-            <p className="text-xs md:text-sm text-slate-600 font-semibold tracking-widest uppercase drop-shadow-sm">
+            <p className="text-xs md:text-sm text-blue-500 font-semibold tracking-widest uppercase drop-shadow-sm">
               Data Science Student &middot; PUCIT Lahore
             </p>
           </div>
