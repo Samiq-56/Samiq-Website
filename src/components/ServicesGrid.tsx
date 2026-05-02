@@ -1,62 +1,62 @@
 import React from 'react';
 
 export default function ServicesGrid() {
-  const services = [
+  const skills = [
     {
-      title: "Course Education",
-      desc: "400K+ students. 21+ platforms. Learn at your pace.",
-      icon: "🎓"
-    },
-    {
-      title: "Web Development",
-      desc: "Fast, modern websites. HTML/CSS/JS. Deployed on Vercel.",
+      title: "Programming",
+      desc: "Strong foundation in C++, Object-Oriented Programming, and Data Structures.",
       icon: "💻"
     },
     {
-      title: "AI Automation",
-      desc: "Chatbots, n8n workflows, smart agents. 24/7 automation.",
+      title: "Web Development",
+      desc: "Building modern websites using HTML, CSS, JavaScript, React, and Node.js.",
+      icon: "🌐"
+    },
+    {
+      title: "Data Science",
+      desc: "Data analysis, probability & statistics modeling using Excel and modern tools.",
+      icon: "📊"
+    },
+    {
+      title: "Artificial Intelligence",
+      desc: "Expanding knowledge through certifications from Coursera, Google, and Microsoft.",
       icon: "🤖"
     },
     {
-      title: "Brand Building",
-      desc: "LinkedIn strategy, Instagram growth, Substack newsletters.",
-      icon: "📱"
+      title: "Digital Logic Design",
+      desc: "Simulating combinational and sequential circuits using Logisim and circuit theory.",
+      icon: "⚡"
     },
     {
-      title: "Video Production",
-      desc: "Scripting, editing, course videos, social media reels.",
-      icon: "🎬"
-    },
-    {
-      title: "UI/UX Design",
-      desc: "Figma wireframes to pixel-perfect prototypes. Real projects.",
-      icon: "🎨"
+      title: "Problem Solving",
+      desc: "Participating in online challenges and developing algorithmic logic and reasoning.",
+      icon: "🧠"
     }
   ];
 
   return (
-    <section className="bg-[#0d0d0d] py-[80px] lg:py-[120px] px-8 md:px-16 border-t border-white/5">
+    <section className="bg-white py-[80px] lg:py-[120px] px-8 md:px-16 border-t border-slate-200">
       <div className="max-w-[1200px] mx-auto">
         
         <div className="mb-16 text-center">
-          <h3 className="text-3xl md:text-5xl font-bold text-[#ffffff] mb-4 tracking-tight">
-            Services
+          <h3 className="text-3xl md:text-5xl font-bold text-slate-800 mb-4 tracking-tight">
+            My <span className="text-blue-500">Skills</span>
           </h3>
-          <p className="text-lg md:text-xl text-[#999999] max-w-2xl mx-auto">
-            What I can do for you and your business.
+          <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
+            Technical proficiencies and areas of continuous learning.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, idx) => (
+          {skills.map((skill, idx) => (
             <div 
               key={idx} 
               className="glass-card rounded-3xl p-8"
             >
-              <div className="text-5xl mb-6">{service.icon}</div>
-              <h4 className="text-xl font-bold text-[#ffffff] mb-3">{service.title}</h4>
-              <p className="text-[#999999] leading-relaxed">
-                {service.desc}
+              <div className="text-5xl mb-6">{skill.icon}</div>
+              <h4 className="text-xl font-bold text-slate-800 mb-3">{skill.title}</h4>
+              <p className="text-slate-600 leading-relaxed">
+                {skill.desc}
               </p>
             </div>
           ))}

@@ -4,9 +4,8 @@ import { useState, useEffect } from 'react';
 
 const links = [
   { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Timeline', href: '#timeline' },
-  { label: 'Courses', href: '#courses' },
+  { label: 'Subjects', href: '#courses' },
+  { label: 'Journey', href: '#timeline' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -30,14 +29,14 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="#top"
-            className="px-4 py-1.5 text-white font-bold text-sm md:text-base whitespace-nowrap"
+            className="px-4 py-1.5 text-slate-800 font-bold text-sm md:text-base whitespace-nowrap"
             style={{ letterSpacing: '-0.02em' }}
           >
-            Chetan Pujari<span className="text-[#ff6b35]">.</span>
+            Samiq Bukhari<span className="text-blue-500">.</span>
           </a>
 
           {/* Vertical divider — hidden on small mobile */}
-          <span className="hidden sm:block w-px h-5 bg-white/10 mx-1" aria-hidden />
+          <span className="hidden sm:block w-px h-5 bg-slate-300 mx-1" aria-hidden />
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center">
@@ -45,7 +44,7 @@ export default function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
-                className="px-4 py-1.5 text-sm text-zinc-300 hover:text-white rounded-full hover:bg-white/[0.06] transition-colors whitespace-nowrap"
+                className="px-4 py-1.5 text-sm text-slate-600 hover:text-blue-500 rounded-full hover:bg-slate-200/50 transition-colors whitespace-nowrap font-medium"
               >
                 {l.label}
               </a>
@@ -57,20 +56,20 @@ export default function Navbar() {
             type="button"
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}
-            className="md:hidden w-9 h-9 flex items-center justify-center text-white rounded-full hover:bg-white/[0.06] transition-colors"
+            className="md:hidden w-9 h-9 flex items-center justify-center text-slate-800 rounded-full hover:bg-slate-200/50 transition-colors"
           >
-            <span className="relative block w-4 h-px bg-white before:content-[''] before:absolute before:left-0 before:-top-[6px] before:w-4 before:h-px before:bg-white after:content-[''] after:absolute after:left-0 after:top-[6px] after:w-4 after:h-px after:bg-white" />
+            <span className="relative block w-4 h-px bg-slate-800 before:content-[''] before:absolute before:left-0 before:-top-[6px] before:w-4 before:h-px before:bg-slate-800 after:content-[''] after:absolute after:left-0 after:top-[6px] after:w-4 after:h-px after:bg-slate-800" />
           </button>
 
           {/* Vertical divider before CTA — desktop only */}
-          <span className="hidden md:block w-px h-5 bg-white/10 mx-1" aria-hidden />
+          <span className="hidden md:block w-px h-5 bg-slate-300 mx-1" aria-hidden />
 
           {/* CTA */}
           <a
-            href="mailto:chetanpujari92@gmail.com"
+            href="mailto:samiqbukhari51214@gmail.com"
             className="hidden sm:inline-block ml-1 px-4 md:px-5 py-2 rounded-full pill-cta font-bold text-[11px] md:text-xs tracking-[0.08em] uppercase whitespace-nowrap"
           >
-            Work With Me
+            Contact Me
           </a>
         </div>
       </nav>
@@ -84,17 +83,17 @@ export default function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="px-4 py-3 text-zinc-200 hover:text-white hover:bg-white/[0.06] rounded-2xl text-base font-medium transition-colors"
+                className="px-4 py-3 text-slate-600 hover:text-blue-500 hover:bg-slate-100 rounded-2xl text-base font-medium transition-colors"
               >
                 {l.label}
               </a>
             ))}
             <a
-              href="mailto:chetanpujari92@gmail.com"
+              href="mailto:samiqbukhari51214@gmail.com"
               onClick={() => setOpen(false)}
               className="mt-2 mx-1 px-5 py-3 rounded-full pill-cta font-bold text-xs tracking-[0.08em] uppercase text-center"
             >
-              Work With Me
+              Contact Me
             </a>
           </div>
         </div>

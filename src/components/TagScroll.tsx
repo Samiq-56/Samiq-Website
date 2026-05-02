@@ -1,16 +1,16 @@
 import React from 'react';
 
 const tagsRow1 = [
-  "AI Educator", "400K+ Students", "UI/UX Designer", "Web Developer", "Prompt Engineer"
+  "Data Science", "Artificial Intelligence", "Web Development", "Machine Learning", "Problem Solving"
 ];
 
 const tagsRow2 = [
-  "n8n Automation", "Course Creator", "Workshop Speaker at NITs", "21+ Platforms", "190+ Countries"
+  "PUCIT", "C++ Programming", "Data Structures", "Web Design", "Student"
 ];
 
 export default function TagScroll() {
   return (
-    <section className="bg-[#0d0d0d] py-16 overflow-hidden border-t border-white/5">
+    <section className="bg-slate-50 py-16 overflow-hidden border-t border-slate-200">
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes scroll-left {
           0% { transform: translateX(0); }
@@ -43,10 +43,10 @@ export default function TagScroll() {
               <div key={i} className="flex gap-6 px-3">
                 {tagsRow1.map((tag, j) => (
                   <div key={j} className="flex items-center gap-6">
-                    <span className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-zinc-600 to-zinc-800 uppercase tracking-tighter">
+                    <span className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-slate-300 to-slate-400 uppercase tracking-tighter">
                       {tag}
                     </span>
-                    <span className="text-zinc-700 text-3xl">&middot;</span>
+                    <span className="text-slate-300 text-3xl">&middot;</span>
                   </div>
                 ))}
               </div>
@@ -61,10 +61,10 @@ export default function TagScroll() {
               <div key={i} className="flex gap-6 px-3">
                 {tagsRow2.map((tag, j) => (
                   <div key={j} className="flex items-center gap-6">
-                    <span className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-zinc-600 to-zinc-800 uppercase tracking-tighter">
+                    <span className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-slate-300 to-slate-400 uppercase tracking-tighter">
                       {tag}
                     </span>
-                    <span className="text-zinc-700 text-3xl">&middot;</span>
+                    <span className="text-slate-300 text-3xl">&middot;</span>
                   </div>
                 ))}
               </div>

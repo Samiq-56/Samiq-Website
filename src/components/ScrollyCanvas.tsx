@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, RefObject } from 'react';
 import { useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
 
-const FRAME_COUNT = 120;
+const FRAME_COUNT = 192;
 
 interface Props {
   heroRef: RefObject<HTMLDivElement>;
@@ -30,7 +30,7 @@ export default function ScrollyCanvas({ heroRef }: Props) {
       return new Promise<HTMLImageElement>((resolve) => {
         const img = new Image();
         const padded = i.toString().padStart(3, '0');
-        img.src = `/sequence/frame_${padded}_delay-0.067s.webp`;
+        img.src = `/sequence/frame_${padded}_delay-0.041s.webp`;
         const done = () => {
           if (cancelled) return;
           loadedCount++;

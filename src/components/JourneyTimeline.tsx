@@ -4,28 +4,27 @@ import { motion } from 'framer-motion';
 
 export default function JourneyTimeline() {
   const timeline = [
-    { year: "2020", title: "First Course on Udemy", desc: "Launched with zero audience. Something clicked." },
-    { year: "2021", title: "Expanded to Skillshare", desc: "Multi-platform presence begins." },
-    { year: "2023", title: "TutorialsPoint & Starweaver", desc: "Reached enterprise learners." },
-    { year: "2024", title: "350K+ Students & Packt Deal", desc: "Published on Packt, distributed to Coursera & O'Reilly." },
-    { year: "2025", title: "NIT Workshops & 539K LinkedIn Impressions", desc: "Took education offline to India's top NITs." },
-    { year: "2026", title: "400K+ Students. AI Agents. 21+ Platforms.", desc: "Building the future of applied AI education." },
+    { year: "2020 - 2021", title: "Matriculation", desc: "Divisional Model College FSD. Completed my secondary education with a strong focus on science and mathematics. Participated in science fairs." },
+    { year: "2022 - 2023", title: "Intermediate (FSc Pre-Engineering)", desc: "Punjab Group Of Colleges. Focused on mathematics, physics, and computer science. Discovered my passion for programming and problem solving." },
+    { year: "2024 - 2028", title: "BS Data Science", desc: "PUCIT, University of the Punjab. Currently enrolled in one of Pakistan's top CS institutions. Learning data analysis, machine learning, and real-world problem solving." },
+    { year: "2024 - Present", title: "Self-Learning Web Development", desc: "Built websites using HTML, CSS, JavaScript, React, and Node.js. Worked on real-world portfolios and participated in online challenges." },
+    { year: "2024 - Present", title: "AI & Data Science Certifications", desc: "Coursera, Google, Microsoft. Earned certificates in AI, machine learning, and data science from global platforms. Constantly expanding my skillset." },
   ];
 
   return (
-    <section className="bg-[#0d0d0d] py-[80px] lg:py-[120px] px-8 md:px-16 border-t border-white/5">
+    <section className="bg-white py-[80px] lg:py-[120px] px-8 md:px-16 border-t border-slate-200">
       <div className="max-w-[800px] mx-auto">
         
         <div className="mb-16 text-center">
-          <h3 className="text-3xl md:text-5xl font-bold text-[#ffffff] mb-4 tracking-tight">
-            Timeline
+          <h3 className="text-3xl md:text-5xl font-bold text-slate-800 mb-4 tracking-tight">
+            My <span className="text-blue-500">Journey</span>
           </h3>
-          <p className="text-lg md:text-xl text-[#999999]">
-            The journey so far.
+          <p className="text-lg md:text-xl text-slate-600">
+            A timeline of my academic background and learning experiences.
           </p>
         </div>
 
-        <div className="relative border-l-2 border-white/10 ml-4 md:ml-8 pl-8 md:pl-12 space-y-12">
+        <div className="relative border-l-2 border-slate-200 ml-4 md:ml-8 pl-8 md:pl-12 space-y-12">
           {timeline.map((item, idx) => (
             <motion.div 
               key={idx}
@@ -36,15 +35,15 @@ export default function JourneyTimeline() {
               className="relative"
             >
               {/* Timeline Dot */}
-              <div className="absolute w-4 h-4 bg-[#ff6b35] rounded-full -left-[41px] md:-left-[57px] top-1.5 shadow-[0_0_10px_rgba(255,107,53,0.5)]" />
+              <div className="absolute w-4 h-4 bg-blue-500 rounded-full -left-[41px] md:-left-[57px] top-1.5 shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
               
-              <span className="inline-block text-sm font-bold tracking-widest text-[#ff6b35] mb-2 uppercase">
+              <span className="inline-block text-sm font-bold tracking-widest text-blue-500 mb-2 uppercase">
                 {item.year}
               </span>
-              <h4 className="text-2xl font-bold text-[#ffffff] mb-2">
+              <h4 className="text-2xl font-bold text-slate-800 mb-2">
                 {item.title}
               </h4>
-              <p className="text-[#999999] text-lg leading-relaxed">
+              <p className="text-slate-600 text-lg leading-relaxed">
                 {item.desc}
               </p>
             </motion.div>

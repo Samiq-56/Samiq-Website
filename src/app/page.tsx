@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main
       id="top"
-      className="bg-[#0d0d0d] min-h-screen w-full font-sans text-[#ffffff] selection:bg-[#ff6b35] selection:text-white"
+      className="bg-slate-50 min-h-screen w-full font-sans text-slate-800 selection:bg-blue-500 selection:text-white"
     >
       <Navbar />
 
@@ -28,7 +28,7 @@ export default function Home() {
       </div>
 
       {/* Content Sections */}
-      <div className="relative z-20 bg-[#0d0d0d]">
+      <div className="relative z-20 bg-slate-50">
         <TagScroll />
         <div id="about"><AboutMeSplit /></div>
         <div id="services"><ServicesGrid /></div>
